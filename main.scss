@@ -1,0 +1,437 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,700&display=swap');
+/* ******* */
+
+/* VARIABLES */
+
+$black-font: #353535;
+$white-bg: white;
+$beige: #f7f3ef;
+
+/* ********* */
+/* MODULES */
+
+@import 'style/modules/reset';
+
+/* ******* */
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    color: #353535;
+    background-color: $white-bg;
+    font-family: 'Roboto Condensed';
+}
+
+section {
+    width: 100%;
+    padding: 0 10%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    width: fit-content;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: .8rem;
+    border-bottom: 2px solid goldenrod;
+}
+
+p {
+    color: #505050;
+}
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 1rem 1rem;
+
+    .menu {
+        position: absolute;
+        top:0;
+        left: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        text-align: right;
+        
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+
+            &-list {
+                list-style: none;
+    
+                .nav-item {
+    
+    
+                    .nav-link {
+                        font-size: 6rem;
+                        color: black;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    i {
+        font-size: 3rem;
+    }
+}
+
+/* ACCUEIL */
+.accueil {
+    display: flex;
+    align-items: center;
+
+    height: 100vh;
+
+    .container {
+        color: #353535;
+
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            font-size: 6rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 3.2rem;
+            letter-spacing: 1px;
+            margin-bottom: 4rem;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 2rem;
+            color: #6A6A6A;
+        }
+    }
+}
+/* ******* */
+
+/* SERVICES */
+.services {
+    z-index: 1;
+    background-color: #303030;
+
+    .container {
+        display: grid;
+        grid-template-areas: 
+        'title'
+        'one'
+        'two'
+        'three'
+        'four';
+        grid-gap: 1rem;
+        padding-bottom: 5rem;
+        color: white;
+
+
+        h1 {
+            grid-area: title;
+            margin: 4rem 0 3rem;
+
+            font-size: 4rem;
+            color: white;
+        }
+
+        .card {
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+
+            max-width: 30rem;
+
+            h2 {
+                width: fit-content;
+                font-size: 2.2rem;
+                margin-bottom: 2rem;
+                border-bottom: 2px solid goldenrod;
+            }
+            p {
+                font-size: 1.6rem;
+                color: rgba(white, 0.9);    
+            }
+        }
+
+        .two,
+        .three,
+        .four {
+            margin-top: 2rem;
+        }
+        .one {
+            grid-area: one;
+        }
+        .two {
+            grid-area: two;
+        }
+        .three {
+            grid-area: three;
+        }
+        .four {
+            grid-area: four;
+        }
+        
+    }
+
+}
+/* ******** */
+
+/* PROJETS */
+.projets {
+    padding-bottom: 10rem;
+
+    background-color: rgba(goldenrod, 0.1);
+    .container {
+        max-width: 40rem;
+        margin: auto;
+
+        h1 {
+            padding: 4rem 0;
+
+            font-size: 4rem;
+            color: black;
+        }
+
+        &-projet {
+            .projet {
+                display: flex;
+                flex-direction: column;
+    
+                background: white;
+                box-shadow: 4px 4px 14px 0 rgba(0,0,0,.1);
+    
+                img {
+                    border: 0;
+                    max-width: 100%;
+                    vertical-align: middle;
+                    display: inline-block;
+                }
+    
+                &-infos {
+                    padding: 2rem;
+    
+                    h2 {
+                        font-size: 2rem;
+                        font-weight: 600;
+                        border: 0;
+                    }
+        
+                    p {
+                        font-size: 1.9rem;
+                    }
+                }
+                &-button {
+                    padding: 2rem;
+    
+                    button {
+    
+                        padding: 1rem 1.5rem;
+    
+                        background: $black-font;
+                        color: white;
+    
+                        font-size: 2rem;
+                        border: 0;
+                    }
+                }
+            }
+
+            .projet + .projet {
+                margin-top: 5rem;
+            }
+
+        }
+
+        
+    }
+}
+/* ******** */
+
+@media (min-width: 480px) {
+    .accueil {    
+        .container {    
+            h1 {
+                font-size: 7rem;
+                line-height: 0.7;
+            }
+    
+            h3 {
+                font-size: 3.5rem;
+                margin-bottom: 3rem;
+            }
+    
+            p {font-size: 2rem; max-width: 38rem;}
+        }
+    }
+
+    .services {
+        .container {
+
+            h1 {
+                font-size: 5rem;
+            }
+
+            .card {
+                max-width: 35rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 2rem;
+    }
+    .accueil {    
+        .container {    
+            h1 {font-size: 9.5rem;}
+    
+            h3 {font-size: 4rem;}
+    
+            p {font-size: 2.2rem; max-width: 55rem;}
+        }
+    }
+
+    .services {
+        .container {
+            max-width: 80rem;
+            margin: auto;
+            grid-template-areas: 
+            'title title'
+            'one   two'
+            'three four';
+
+            .card {
+                max-width: 35rem;
+                
+                h2 {
+                    font-size: 2.8rem;
+                }
+                p {
+                    font-size: 1.8rem;
+                }
+            }
+
+            .two {
+                margin-top: 0;
+            }
+
+            .three,
+            .four {
+                margin-top: 4rem;
+            }
+
+            
+        }
+    }
+
+    .projets {
+        .container {
+            max-width: none;
+            &-projet {
+                display: flex;
+                justify-content: space-between;
+
+                .projet {
+                    max-width: 32rem;
+                }
+                .projet + .projet {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    section.accueil {
+        max-width: 80rem;
+        padding: 0;
+        margin: 0 auto;
+    }
+    header {
+        padding: 3rem 4rem;
+    }
+    .accueil {    
+        .container {    
+
+
+            h1 {font-size: 11.5rem;}
+    
+            h3 {font-size: 4.5rem;}
+    
+            p {font-size: 2.8rem;}
+        }
+    }
+
+    .projets {
+        .container {
+            max-width: 100rem;
+            margin: auto;
+            &-projet {
+                display: flex;
+                justify-content: flex-start;
+                
+                .projet {
+                    max-width: 32rem;
+                }
+                .projet + .projet {
+                    margin-top: 0;
+                    margin-left: 10rem;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    section,
+    section.accueil {
+        max-width: none;
+        padding: 0 20rem;
+    }
+
+    .services {
+        .container {
+            max-width: 100rem;
+        }
+    }
+}
