@@ -325,7 +325,8 @@ header {
     .white {
         .hamburger,
         .hamburger::before,
-        .hamburger::after {
+        .hamburger::after,
+         {
             background-color: black !important;
         }
         h1 {
