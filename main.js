@@ -21,13 +21,28 @@ navLinks.forEach(link => {
 
 /* SCROLLREVEAL */
 
-ScrollReveal().reveal('.container', { 
+ScrollReveal().reveal('.r', { 
     duration: 1000,
     distance: '30px',
     origin: 'top',
-    viewFactor: .7,
+    viewFactor: .6,
  });
 
+ ScrollReveal().reveal('.r-100', { 
+    duration: 1000,
+    distance: '30px',
+    origin: 'top',
+    viewFactor: .4,
+    delay: 100,
+ });
+
+ ScrollReveal().reveal('.r-200', { 
+    duration: 1000,
+    distance: '30px',
+    origin: 'top',
+    viewFactor: .4,
+    delay: 200,
+ });
 /* SCROLLSPY FOR NAVBAR COLOR CHANGE */
 const logo = selectElem('.logo');
 const services = selectElem('.services');

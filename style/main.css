@@ -221,22 +221,16 @@ header .menu-toggle {
 header .logo {
   display: block;
   width: 6rem;
-  height: 6rem;
-  background: url("/img/kumatekLogoNoir.svg") center center/6rem 6rem;
-}
-
-header .logo h1 {
-  text-indent: -3000px;
-}
-
-header .white {
-  color: white;
 }
 
 header .white .hamburger,
 header .white .hamburger::before,
 header .white .hamburger::after {
   background: white !important;
+}
+
+header .white svg {
+  fill: white;
 }
 
 header .menu-toggle {
@@ -610,6 +604,35 @@ header .menu-container .menu .nav-list .nav-item + .nav-item {
 }
 
 .projets .container-projet .projet {
+  background: white;
+  -webkit-box-shadow: 4px 4px 14px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 14px 0 rgba(0, 0, 0, 0.1);
+}
+
+.projets .container-projet .projet:hover .projet-link img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.projets .container-projet .projet .disable {
+  -webkit-filter: grayscale(1) !important;
+          filter: grayscale(1) !important;
+}
+
+.projets .container-projet .projet .disable .projet-infos h2, .projets .container-projet .projet .disable .projet-infos p {
+  color: grey;
+  opacity: .5;
+}
+
+.projets .container-projet .projet .disable .projet-button {
+  opacity: .5;
+}
+
+.projets .container-projet .projet .disable .projet-button button {
+  color: grey;
+}
+
+.projets .container-projet .projet-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -617,34 +640,50 @@ header .menu-container .menu .nav-list .nav-item + .nav-item {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: white;
-  -webkit-box-shadow: 4px 4px 14px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 4px 4px 14px 0 rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  text-align: left;
+  width: 100%;
+  height: 100%;
 }
 
-.projets .container-projet .projet img {
+.projets .container-projet .projet-link .img-container {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.projets .container-projet .projet-link .img-container img {
   border: 0;
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
-.projets .container-projet .projet-infos {
+.projets .container-projet .projet-link .projet-infos {
   padding: 2rem;
 }
 
-.projets .container-projet .projet-infos h2 {
+.projets .container-projet .projet-link .projet-infos h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: 600;
   border: 0;
 }
 
-.projets .container-projet .projet-infos p {
+.projets .container-projet .projet-link .projet-infos p {
   font-size: 1.9rem;
 }
 
-.projets .container-projet .projet-button {
+.projets .container-projet .projet-link .projet-button {
   padding: 2rem;
+}
+
+.projets .container-projet .projet-link .projet-button a {
+  color: white;
+  text-decoration: none;
 }
 
 .projets .container-projet .projet + .projet {

@@ -12,7 +12,9 @@
 </head>
 <body>
     <header class="header">
-        <a href="/" class="logo"><h1>KumaTeK</h1></a>
+        <a href="/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1409.4 556"><title>  kumatekLogoNoir</title><g data-name="Calque 2"><g data-name="Calque 1"><path d="M476.7 556h-117V379.9l-74.5-80.3L124.8 556H0L212.4 225.3 10.4 0H144.7l215 235.7V0h117Z"/><path d="M646.7 90h-171V0h458V90h-170V556h-117Z"/><path d="M932.7 0h117V235.7L1264.7 0H1399L1197 225.3 1409.4 556h-124.8L1124.2 299.6l-74.5 80.3V556h-117Z"/></g></g></svg>
+        </a>
         <button class="menu-toggle">
             <span class="hamburger"></span>
         </button>
@@ -52,30 +54,30 @@
 
     <section class="accueil shadow-in" id="accueil">
         <div class="container">
-            <h1 class="headline">KumaTeK</h1><h3>développeur web</h3>
-            <p>Création, intégration et refonte de site internet.</p>
+            <h1 class="headline r">KumaTeK</h1><h3 class="r-100">développeur web</h3>
+            <p class="r-200">Création, intégration et refonte de site internet.</p>
         </div>
     </section>
 
     <section class="services" id="services">
         <div class="container">
-            <h1>Services</h1>
-            <div class="card one">
+            <h1 class="r">Services</h1>
+            <div class="card one  r-100">
                 <h2>Création web</h2>
                 <p>A partir de vos idées, je crée un site à votre image : moderne, rapide et accessible.</p>
             </div>
     
-            <div class="card two">
+            <div class="card two r-100">
                 <h2>Intégration web</h2>
                 <p>Réalisation de votre maquette à l'identique en respectant les standards du web.</p>
             </div>
 
-            <div class="card three">
+            <div class="card three r-100">
                 <h2>Pages dynamiques</h2>
                 <p>Du contenus animés pour rendre plus atrayant votre site internet.</p>
             </div>
     
-            <div class="card four">
+            <div class="card four r-100">
                 <h2>Responsive design</h2>
                 <p>Un site qui s'adapte à tous les supports</p>
             </div>
@@ -84,27 +86,35 @@
 
     <section class="projets shadow-in" id="projets">
         <div class="container">
-            <h1>Projets</h1>
-            <div class="container-projet">
+            <h1 class="r">Projets</h1>
+            <div class="container-projet r-100">
                 <div class="projet">
-                    <img src="https://picsum.photos/800/450" alt="image de présentation du projet">
-                    <div class="projet-infos">
-                        <h2>Titre projet</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit non recusandae</p>
-                    </div>
-                    <div class="projet-button">
-                        <button class="goto">Voir le projet</button>
-                    </div>
+                    <a href="/" class="projet-link">
+                        <div class="img-container">
+                            <img src="https://picsum.photos/800/450" alt="image de présentation du projet">
+                        </div>
+                        <div class="projet-infos">
+                            <h2>Titre projet</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit non recusandae</p>
+                        </div>
+                        <div class="projet-button">
+                            <button class="goto">Voir le projet</button>
+                        </div>
+                    </a>
                 </div>
-                <div class="projet">
-                    <img src="https://picsum.photos/1280/720" alt="image de présentation du projet">
-                    <div class="projet-infos">
-                        <h2>Titre projet</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit non recusandae</p>
-                    </div>
-                    <div class="projet-button">
-                        <button class="goto">Voir le projet</button>
-                    </div>
+                <div class="projet disable">
+                    <a class="projet-link disable">
+                        <div class="img-container">
+                            <img src="https://picsum.photos/1280/720" alt="image de présentation du projet">
+                        </div>
+                        <div class="projet-infos">
+                            <h2>Titre projet</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit non recusandae</p>
+                        </div>
+                        <div class="projet-button">
+                            <button class="goto">Voir le projet</button>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -112,7 +122,7 @@
 
     <section class="contact" id="contact">
         <div class="container">
-            <div class="left-col renseignement">
+            <div class="left-col renseignement r">
                 <h1>Informations</h1>
                 <p>Jonathan Aurry</p>
                 <p>+33 (0)6 51 42 85 05</p>
@@ -125,7 +135,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form">
+            <div class="form r-100">
                 <form action="" method="post">
                     <div class="form-group">
                         <label for="name">Nom</label>
